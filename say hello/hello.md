@@ -31,8 +31,11 @@ expected output: Hello Smith 5"
 6. input for name: <script> 
 expected output: error message "Please enter a valid name"
 
-6. input for name: },{, [], :, ;, & - They should be checked separately for all
+7. input for name: },{, [], :, ;, & - They should be checked separately for all
 expected output: error message "Please enter a valid name"
+
+8. input for name: ADD, DELETE, SELECT, UPDATE, WHERE - They should be checked separately for all
+expected output: error message "Please enter a valid name
 
 Process:
 ========
