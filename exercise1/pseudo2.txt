@@ -1,0 +1,29 @@
+
+--- Input Digits and sorting ---
+Allow the user to input digits, afterwards sort and print them in numerical order.
+
+--- Limits ---
+1. max 10 and min 2 digits
+2. one input field
+3. seperator is comma
+4. sorting from least number to greates number
+5. Digits, not greater than 9
+
+Solution Way and Why
+--- Time is limited.
+We can choose the fastest and slowest people together to reduce time.
+
+Pseudo:
+
+Initialize maxTime as 12;
+Initialize totalTime as 0;
+Initialize NumberofPeople;
+Initialize maxPeople as 2;
+Initialize peopleAtStart as 4;
+
+Select the 2FastestPeople (times)
+Select the 2SlowestPeople (times)
+
+
+
+
