@@ -20,10 +20,24 @@ expected output: "Hello Erdogan"
 input for name: 1234
 expected output: error message "Please enter a valid name"
 
+4. 
+input for name: Anna Maria
+expected output: Hello Anna Maria"
+
+5. 
+input for name: Smith 5
+expected output: Hello Smith 5"
+
+6. input for name: <script> 
+expected output: error message "Please enter a valid name"
+
+6. input for name: },{, [], :, ;, & - They should be checked separately for all
+expected output: error message "Please enter a valid name"
+
 Process:
 ========
 1. Ask users for name
-2. Check the name if it is empty or any number
+2. Check the name if it is empty, any number or a malicious attack like SQL injection or Javascript
 2.a. If everythings is ok: Go step 3
 2.b  If everything is not ok: Go step 1 again with error message
 3. Combine the name with 'Hello '
