@@ -3,8 +3,11 @@ Create a program that prompts for an input string and displays output that shows
 
 inputs:
 - word: a string - It can contains any characters as a string except ""
+- numberOfCharacters - Integer
 process:
+- divideCharactersIntoLetters
 - countCharacters
+- displayResult 
 output:
 - word and numberOfCharacters: a string
 
@@ -12,28 +15,39 @@ testCases:
 ----------
 1. 
 input for word: None
-expected output: error message "Please enter your a word"
+expected output: error message "Please enter something"
 2. 
-input for name: Erdogan
-expected output: "Hello Erdogan"
+input for word: Erdogan
+expected output: "Erdogan 7"
 3. 
-input for name: 1234
+input for word: 1234
+expected output: "1234 4"
+
+4. input for name: <script> 
 expected output: error message "Please enter a valid name"
+
+5. input for name: },{, [], :, ;, & - They should be checked separately for all
+expected output: error message "Please enter a valid name"
+
+6. input for name: ADD, DELETE, SELECT, UPDATE, WHERE - They should be checked separately for all
+expected output: error message "Please enter a valid name
 
 Process:
 ========
-1. Ask users for name
-2. Check the name if it is empty or any number
+1. Ask users for a word
+2. Check the name if it is empty or a malicious attack
 2.a. If everythings is ok: Go step 3
 2.b  If everything is not ok: Go step 1 again with error message
-3. Combine the name with 'Hello '
-4. Print the greeting name
+4. Divide the word into letters one by one
+3. Count the characters
+4. Print the word and number of characters
 
 Refine process:
 ===============
-Prompt "Please enter your name"
-Set given name as in the name variable
-Check name:
+Initialize numberOfCharacters to 0
+Prompt "Please enter a word"
+Set given name as in the word variable
+Check word:
     If it does not works
         error = true
     Else 
@@ -42,6 +56,10 @@ Check name:
     If error
         Display "Please enter a valid name"
         Go back to prompt
-Set greetingName = "Hello " + name
-Print greetingName
+Loop for word
+    Increase numberOfCharacters with 1
+Revert numberOfCharacters to String
+Print word + " " + numberOfCharacters
+
+
 
